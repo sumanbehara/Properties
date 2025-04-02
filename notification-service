@@ -1,0 +1,24 @@
+spring.datasource.url=jdbc:h2:mem:notification
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Logging configuration.
+logging.level.root=INFO
+
+spring.kafka.bootstrap-servers=localhost:9092
+spring.kafka.consumer.group-id=notification-service-group
+spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+
+eureka.client.serviceUrl.defaultZone  = http://localhost:8761/eureka
+eureka.client.instance.preferIpAddress = true
+
+
+kafka.topic.customer-topic=customer-topic
+
+#Zipkin
+management.tracing.sampling.probability=1.0
+management.zipkin.tracing.endpoint=http://localhost:9411/api/v2/spans
